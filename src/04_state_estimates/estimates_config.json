@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "raw_directory": "data/raw",
+  "raw_config": "src/01_raw_data/raw_config.json",
+  "appendix_directory": "data/processed/appendix_tables",
+  "requests": {
+    "gbd2021": ["R6_level3", "R6_level4"],
+    "gbd2023_by_age": ["R4"],
+    "gbd2023_annual": ["R1", "R3a"],
+    "gbd2023_population_by_age": ["R5"],
+    "gbd2023_age_standardised": ["R2", "R3b"],
+    "gbd2023_all_cause": ["allcause"]
+  },
+  "age_standardised": "Age-standardized",
+  "standard_population_groups": {
+    "0-6 days": ["Early Neonatal"],
+    "7-27 days": ["Late Neonatal"],
+    "1-5 months": ["1 to 5 months"],
+    "6-11 months": ["6 to 11 months"],
+    "12-23 months": ["12 to 23 months"],
+    "2-4 years": ["2 to 4"],
+    "5-14 years": ["5 to 9", "10 to 14"],
+    "15-49 years": ["15 to 19", "20 to 24", "25 to 29", "30 to 34", "35 to 39", "40 to 44", "45 to 49"],
+    "50-69 years": ["50 to 54", "55 to 59", "60 to 64", "65 to 69"],
+    "70+ years": ["70 to 74", "75 to 79", "80 to 84", "85 to 89", "90 to 94", "95 plus"]
+  },
+  "decomposition_periods": [[1990, 2019], [1990, 2023]],
+  "uncertainty": {
+    "draws": 1000,
+    "seed": 20261016,
+    "national_seed": 20261028,
+    "percentiles": [2.5, 97.5],
+    "cause_years": [1990, 2019, 2021, 2023]
+  },
+  "sensitivity": {
+    "covid_cause": "COVID-19",
+    "covid_years": [2020, 2023],
+    "haq": {
+      "points": 10,
+      "odds_ratios": [0.75, 0.9, 1.1, 1.25],
+      "slope_search": [-1.0, 1.0]
+    },
+    "projection": {
+      "share_factors": [0.9, 1.1],
+      "pre_pandemic_benchmark": 2019
+    }
+  },
+  "india": "India",
+  "global": "Global",
+  "all_ages": "All ages",
+  "sexes": ["Male", "Female", "Both"],
+  "deaths": "Deaths",
+  "ylls": "YLLs (Years of Life Lost)",
+  "benchmark_years": [1990, 2019, 2021],
+  "series_years": [1990, 2023],
+  "first_projection_year": 2022,
+  "share_pools": {
+    "Other unintentional injuries": ["Other unintentional injuries (internal)", "Electrocution"]
+  },
+  "gbd2023_causes_in_pools": {
+    "Electrocution": "Other unintentional injuries"
+  },
+  "no_table_s10_row": [
+    "Alzheimer's disease and other dementias",
+    "Other transport injuries",
+    "Sudden infant death syndrome"
+  ],
+  "level4_not_used": [
+    "Chronic hepatitis B including cirrhosis",
+    "Chronic hepatitis C including cirrhosis"
+  ],
+  "tolerances": {
+    "relative": 0.005,
+    "absolute_deaths": 1.0,
+    "identity": 1e-9
+  }
+}

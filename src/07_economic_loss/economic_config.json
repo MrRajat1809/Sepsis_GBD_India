@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "rbi_tables": "data/processed/raw_data/rbi_tables.csv",
+  "estimates_directory": "data/processed/state_estimates",
+  "india": "India",
+  "valuation_years": [2019, 2021, 2023],
+  "discount_rate": 0.03,
+  "first_projection_year": 2022,
+  "fiscal_years": [2011, 2024],
+  "calendar_weights": {"previous_fiscal": 0.25, "same_fiscal": 0.75},
+  "markers": ["-", "."],
+  "prices": {
+    "current": {"per_capita": "per_capita_nsdp_current", "total": "nsdp_current"},
+    "constant": {"per_capita": "per_capita_nsdp_constant", "total": "nsdp_constant"}
+  },
+  "rupees_per_lakh": 100000,
+  "rupees_per_crore": 10000000,
+  "unit_members": {
+    "Jammu & Kashmir and Ladakh": [
+      {"from_fiscal": 2011, "to_fiscal": 2018, "members": ["Jammu & Kashmir"]},
+      {"from_fiscal": 2019, "to_fiscal": 2024, "members": ["Jammu & Kashmir", "Ladakh"]}
+    ],
+    "Other Union Territories": [
+      {"from_fiscal": 2011, "to_fiscal": 2024, "members": ["Andaman & Nicobar Islands", "Chandigarh", "Puducherry"],
+       "not_in_state_accounts": ["Dadra & Nagar Haveli", "Daman & Diu", "Lakshadweep"]}
+    ]
+  }
+}

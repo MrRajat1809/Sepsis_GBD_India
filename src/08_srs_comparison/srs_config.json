@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "raw_directory": "data/raw",
+  "raw_config": "src/01_raw_data/raw_config.json",
+  "rbi_tables": "data/processed/raw_data/rbi_tables.csv",
+  "neonatal_maternal_directory": "data/processed/neonatal_maternal",
+  "estimates_directory": "data/processed/state_estimates",
+  "population_request": ["R5"],
+  "india": "India",
+  "srs_national": "ALL INDIA",
+  "infant_ages": ["0-6 days", "7-27 days", "1-5 months", "6-11 months"],
+  "markers": [".", "-"],
+  "combined_marker": "*",
+  "annual_measures": {
+    "crude_death_rate": {"table": "death_rate", "per": 1000},
+    "infant_mortality_rate": {"table": "infant_mortality_rate", "per": 1000}
+  },
+  "maternal_measure": {"table": "maternal_mortality_ratio", "per": 100000, "others": "Others"},
+  "srs_units": {
+    "Andhra Pradesh": [{"through": 2013, "units": ["Andhra Pradesh", "Telangana"]}],
+    "Jammu & Kashmir": [{"through": 2100, "units": ["Jammu & Kashmir and Ladakh"]}]
+  },
+  "maternal_groups": {
+    "Andhra Pradesh": [{"through_period": "2011-13", "units": ["Andhra Pradesh", "Telangana"]}],
+    "Madhya Pradesh": [{"through_period": "2014-16", "units": ["Madhya Pradesh", "Chhattisgarh"]}],
+    "Bihar": [{"through_period": "2014-16", "units": ["Bihar", "Jharkhand"]}],
+    "Uttar Pradesh": [{"through_period": "2014-16", "units": ["Uttar Pradesh", "Uttarakhand"]}]
+  },
+  "not_compared": ["Andaman & Nicobar Islands", "Chandigarh", "Dadra & Nagar Haveli", "Daman & Diu", "Lakshadweep", "Puducherry", "Ladakh"]
+}

@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "raw_directory": "data/raw",
+  "raw_config": "src/01_raw_data/raw_config.json",
+  "estimates_directory": "data/processed/state_estimates",
+  "causes": {
+    "neonatal": {"cause": "Neonatal sepsis and other neonatal infections", "parent": "Neonatal disorders"},
+    "maternal": {"cause": "Maternal sepsis and other maternal infections", "parent": "Maternal disorders"}
+  },
+  "requests": {
+    "deaths_level4": ["R3a"],
+    "rates_level4": ["R3b"],
+    "deaths_level3": ["R1"],
+    "all_cause": ["allcause"],
+    "population_by_age": ["R5"],
+    "gbd2021_level4": ["R6_level4"]
+  },
+  "india": "India",
+  "deaths": "Deaths",
+  "all_ages": "All ages",
+  "age_standardised": "Age-standardized",
+  "sexes": ["Male", "Female", "Both"],
+  "neonatal_ages": ["0-6 days", "7-27 days"],
+  "neonatal_period": "0-27 days",
+  "series_years": [1990, 2023],
+  "benchmark_years": [1990, 2019, 2021],
+  "first_projection_year": 2022,
+  "change_periods": [[1990, 2019], [1990, 2021], [1990, 2023]],
+  "births": {
+    "early_neonatal_age": "0-6 days",
+    "late_neonatal_age": "7-27 days",
+    "age_group_days": {"0-6 days": 7, "7-27 days": 21},
+    "days_per_year": 365,
+    "fraction_of_interval_lived_by_deaths": 0.5,
+    "late_neonatal_check_tolerance": 0.01,
+    "srs": {
+      "srs_table": "data/processed/raw_data/srs_birth_rate.csv",
+      "national": "ALL INDIA",
+      "markers": [".", "-"],
+      "combined_marker": "*",
+      "parent_rate": {
+        "Telangana": {"state": "Andhra Pradesh", "through": 2013},
+        "Chhattisgarh": {"state": "Madhya Pradesh", "through": 1998},
+        "Jharkhand": {"state": "Bihar", "through": 1998},
+        "Uttarakhand": {"state": "Uttar Pradesh", "through": 1998}
+      },
+      "unit_rate": {"Jammu & Kashmir and Ladakh": "Jammu & Kashmir"},
+      "unit_rate_check": {"unit": "Jammu & Kashmir and Ladakh", "other": "Ladakh", "max_difference": 0.5},
+      "not_estimated": {"Other Union Territories": "Member union territories have very different birth rates and no population weights are available"}
+    }
+  }
+}

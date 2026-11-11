@@ -1,0 +1,1659 @@
+{
+  "version": "1.0.0",
+  "raw_directory": "data/raw",
+  "incoming_directory": "data/raw/_incoming",
+  "manifest": "data/raw/MANIFEST.csv",
+  "results_tool_columns": [
+    "population_group_id",
+    "population_group_name",
+    "measure_id",
+    "measure_name",
+    "location_id",
+    "location_name",
+    "sex_id",
+    "sex_name",
+    "age_id",
+    "age_name",
+    "cause_id",
+    "cause_name",
+    "metric_id",
+    "metric_name",
+    "year",
+    "val",
+    "upper",
+    "lower"
+  ],
+  "cause_list": {
+    "path": "gbd2023/cod_paper_supplement/gbd2023_cod_supplementary_tables.zip",
+    "table": "_TABLE_S1_",
+    "name_aliases": {
+      "Other unintentional injuries (internal)": "Other unintentional injuries"
+    }
+  },
+  "tolerances": {
+    "sum_identity": 1e-05,
+    "states_to_india": 0.0001,
+    "states_minimum_india_value": 100
+  },
+  "requests": {
+    "allcause": {
+      "round": "gbd2023",
+      "causes": "all",
+      "measures": [
+        "Deaths",
+        "YLLs (Years of Life Lost)"
+      ],
+      "metrics": [
+        "Number",
+        "Rate"
+      ],
+      "ages": [
+        "All ages",
+        "Age-standardized"
+      ],
+      "sexes": [
+        "Both",
+        "Female",
+        "Male"
+      ],
+      "locations": 32
+    },
+    "R1": {
+      "round": "gbd2023",
+      "causes": "level3",
+      "measures": [
+        "Deaths"
+      ],
+      "metrics": [
+        "Number"
+      ],
+      "ages": [
+        "All ages"
+      ],
+      "sexes": [
+        "Both",
+        "Female",
+        "Male"
+      ],
+      "locations": 32
+    },
+    "R2": {
+      "round": "gbd2023",
+      "causes": "level3",
+      "measures": [
+        "Deaths"
+      ],
+      "metrics": [
+        "Rate"
+      ],
+      "ages": [
+        "Age-standardized"
+      ],
+      "sexes": [
+        "Both",
+        "Female",
+        "Male"
+      ],
+      "locations": 32
+    },
+    "R3a": {
+      "round": "gbd2023",
+      "causes": "level2+level4",
+      "measures": [
+        "Deaths"
+      ],
+      "metrics": [
+        "Number"
+      ],
+      "ages": [
+        "All ages"
+      ],
+      "sexes": [
+        "Both",
+        "Female",
+        "Male"
+      ],
+      "locations": 32
+    },
+    "R3b": {
+      "round": "gbd2023",
+      "causes": "level2+level4",
+      "measures": [
+        "Deaths"
+      ],
+      "metrics": [
+        "Rate"
+      ],
+      "ages": [
+        "Age-standardized"
+      ],
+      "sexes": [
+        "Both",
+        "Female",
+        "Male"
+      ],
+      "locations": 32
+    },
+    "R4": {
+      "round": "gbd2023",
+      "causes": "level3+level4",
+      "measures": [
+        "Deaths",
+        "YLLs (Years of Life Lost)"
+      ],
+      "metrics": [
+        "Number"
+      ],
+      "ages": [
+        "0-6 days",
+        "7-27 days",
+        "1-5 months",
+        "6-11 months",
+        "12-23 months",
+        "2-4 years",
+        "5-14 years",
+        "15-49 years",
+        "50-69 years",
+        "70+ years"
+      ],
+      "sexes": [
+        "Both"
+      ],
+      "locations": 32
+    },
+    "R5": {
+      "round": "gbd2023",
+      "causes": "all",
+      "measures": [
+        "Deaths"
+      ],
+      "metrics": [
+        "Number",
+        "Rate"
+      ],
+      "ages": [
+        "All ages",
+        "0-6 days",
+        "7-27 days",
+        "1-5 months",
+        "6-11 months",
+        "12-23 months",
+        "2-4 years",
+        "5-14 years",
+        "15-49 years",
+        "50-69 years",
+        "70+ years"
+      ],
+      "sexes": [
+        "Both"
+      ],
+      "locations": 32
+    },
+    "R6_level2": {
+      "round": "gbd2021",
+      "causes": "level2",
+      "measures": [
+        "Deaths"
+      ],
+      "metrics": [
+        "Number"
+      ],
+      "ages": [
+        "All ages",
+        "0-6 days",
+        "7-27 days",
+        "1-5 months",
+        "6-11 months",
+        "12-23 months",
+        "2-4 years",
+        "5-14 years",
+        "15-49 years",
+        "50-69 years",
+        "70+ years"
+      ],
+      "sexes": [
+        "Both"
+      ],
+      "locations": 33
+    },
+    "R6_level3": {
+      "round": "gbd2021",
+      "causes": "level3",
+      "measures": [
+        "Deaths"
+      ],
+      "metrics": [
+        "Number"
+      ],
+      "ages": [
+        "All ages",
+        "0-6 days",
+        "7-27 days",
+        "1-5 months",
+        "6-11 months",
+        "12-23 months",
+        "2-4 years",
+        "5-14 years",
+        "15-49 years",
+        "50-69 years",
+        "70+ years"
+      ],
+      "sexes": [
+        "Both"
+      ],
+      "locations": 33
+    },
+    "R6_level4": {
+      "round": "gbd2021",
+      "causes": "level4",
+      "measures": [
+        "Deaths"
+      ],
+      "metrics": [
+        "Number"
+      ],
+      "ages": [
+        "All ages",
+        "0-6 days",
+        "7-27 days",
+        "1-5 months",
+        "6-11 months",
+        "12-23 months",
+        "2-4 years",
+        "5-14 years",
+        "15-49 years",
+        "50-69 years",
+        "70+ years"
+      ],
+      "sexes": [
+        "Both"
+      ],
+      "locations": 33
+    }
+  },
+  "files": [
+    {
+      "path": "gbd2016/haq_index/gbd2016_haq_index_code.zip",
+      "request": null,
+      "original_name": "IHME_GBD_2016_HAQ_INDEX_1990_2016_CODE.zip",
+      "source": "https://ghdx.healthdata.org/record/ihme-data/gbd-2016-healthcare-access-and-quality-index-1990-2016",
+      "contents": "R code used to produce the HAQ Index estimates",
+      "years": "1990-2016",
+      "csv_rows": null,
+      "bytes": 18679,
+      "retrieved": "2026-10-16",
+      "sha256": "6189d6182899c3fe001b039f63d60e009b7560f553cd146123014d8154861ba8"
+    },
+    {
+      "path": "gbd2016/haq_index/gbd2016_haq_index_info_sheet.pdf",
+      "request": null,
+      "original_name": "IHME_GBD_2016_HAQ_INDEX_1990_2016_INFO_SHEET_Y2018M05D23.pdf",
+      "source": "https://ghdx.healthdata.org/record/ihme-data/gbd-2016-healthcare-access-and-quality-index-1990-2016",
+      "contents": "Data release information sheet",
+      "years": "1990-2016",
+      "csv_rows": null,
+      "bytes": 673776,
+      "retrieved": "2026-10-16",
+      "sha256": "e8ea0a357757e8c344abf3587d0dffa2c9c9f17814f85f401d0f212c27757eba"
+    },
+    {
+      "path": "gbd2016/haq_index/gbd2016_haq_index_scaled_cause_values.zip",
+      "request": null,
+      "original_name": "IHME_GBD_2016_HAQ_INDEX_1990_2016_SCALED_CAUSE_VALUES.zip",
+      "source": "https://ghdx.healthdata.org/record/ihme-data/gbd-2016-healthcare-access-and-quality-index-1990-2016",
+      "contents": "HAQ Index and scaled scores for 32 amenable causes (0-100), with codebook. GBD 2016 Healthcare Access and Quality Index 1990-2016; global, regional, national and selected subnational locations including India and 31 states and union territories; 1990, 1995, 2000, 2005, 2010, 2016",
+      "years": "1990-2016",
+      "csv_rows": 90684,
+      "bytes": 1053790,
+      "retrieved": "2026-10-16",
+      "sha256": "2b8fd191f35cef7066843539451069aea8f8a5315b0a5c876cba6409eb37b465"
+    },
+    {
+      "path": "gbd2016/haq_index/gbd2016_haq_index_unscaled_cause_values.zip",
+      "request": null,
+      "original_name": "IHME_GBD_2016_HAQ_INDEX_1990_2016_UNSCALED_CAUSE_VALUES.zip",
+      "source": "https://ghdx.healthdata.org/record/ihme-data/gbd-2016-healthcare-access-and-quality-index-1990-2016",
+      "contents": "Age-standardised risk-standardised death rates and mortality-to-incidence ratios for the 32 amenable causes, with codebook. GBD 2016 Healthcare Access and Quality Index 1990-2016; global, regional, national and selected subnational locations including India and 31 states and union territories; 1990, 1995, 2000, 2005, 2010, 2016",
+      "years": "1990-2016",
+      "csv_rows": 87936,
+      "bytes": 1304366,
+      "retrieved": "2026-10-16",
+      "sha256": "667860497a1549afd3b997052d53029e3e7f16e1d15d1215d81d3266aa8eb71f"
+    },
+    {
+      "path": "gbd2021/demographics_paper/gbd2021_demographics_appendix1.pdf",
+      "request": null,
+      "original_name": "mmc1.pdf",
+      "source": "https://doi.org/10.1016/S0140-6736(24)00476-8",
+      "contents": "Appendix 1 to GBD 2021 Demographics Collaborators. Global age-sex-specific mortality, life expectancy, and population estimates in 204 countries and territories and 811 subnational locations, 1950-2021. Lancet 2024;403:1989-2056",
+      "years": "1950-2021",
+      "csv_rows": null,
+      "bytes": 6214631,
+      "retrieved": "2026-10-16",
+      "sha256": "162bdb1f0a8d8f9bb0c8fb66242cb4b76bae11ba2a2806170be19c7b832e16da"
+    },
+    {
+      "path": "gbd2021/results_tool/gbd2021_level2_deaths_number_byage_both_1990-2019-2021.zip",
+      "request": "R6_level2",
+      "original_name": "Request 6 GBD 2021 level 2.zip (inner CSV IHME-GBD_2021_DATA-613ffb56-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/ (GBD 2021 round)",
+      "contents": "GBD 2021 round; Level 2 causes (21 with deaths); Deaths; Number; All ages, 0-6 days, 7-27 days, 1-5 months, 6-11 months, 12-23 months, 2-4 years, 5-14 years, 15-49 years, 50-69 years, 70+ years; Both; Global, India and 31 subnational units",
+      "years": "1990, 2019, 2021",
+      "csv_rows": 21780,
+      "bytes": 804501,
+      "retrieved": "2026-10-15",
+      "sha256": "32a73e2e191a95079e7647c2b95ff565a5be2986077542d5d5cd1224c3efdaf5"
+    },
+    {
+      "path": "gbd2021/results_tool/gbd2021_level3_deaths_number_byage_both_1990.zip",
+      "request": "R6_level3",
+      "original_name": "Request 6 GBD 2021 level 3 1990.zip (inner CSV IHME-GBD_2021_DATA-c6f17ada-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/ (GBD 2021 round)",
+      "contents": "GBD 2021 round; Level 3 causes (139 with deaths); Deaths; Number; All ages, 0-6 days, 7-27 days, 1-5 months, 6-11 months, 12-23 months, 2-4 years, 5-14 years, 15-49 years, 50-69 years, 70+ years; Both; Global, India and 31 subnational units",
+      "years": "1990",
+      "csv_rows": 37785,
+      "bytes": 1367238,
+      "retrieved": "2026-10-15",
+      "sha256": "55ce2a34f54c014dd8ab21f19899c3f84e4ccef6d82db00e86497d9f9545e152"
+    },
+    {
+      "path": "gbd2021/results_tool/gbd2021_level3_deaths_number_byage_both_2019.zip",
+      "request": "R6_level3",
+      "original_name": "Request 6 GBD 2021 level 3 2019.zip (inner CSV IHME-GBD_2021_DATA-1d3af3ad-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/ (GBD 2021 round)",
+      "contents": "GBD 2021 round; Level 3 causes (139 with deaths); Deaths; Number; All ages, 0-6 days, 7-27 days, 1-5 months, 6-11 months, 12-23 months, 2-4 years, 5-14 years, 15-49 years, 50-69 years, 70+ years; Both; Global, India and 31 subnational units",
+      "years": "2019",
+      "csv_rows": 37785,
+      "bytes": 1370299,
+      "retrieved": "2026-10-15",
+      "sha256": "6a989068f4f03a213cb41535cd17fc25e9ea2aa0a6b1c0395c60baa59356d6fc"
+    },
+    {
+      "path": "gbd2021/results_tool/gbd2021_level3_deaths_number_byage_both_2021.zip",
+      "request": "R6_level3",
+      "original_name": "Request 6 GBD 2021 level 3 2021..zip (inner CSV IHME-GBD_2021_DATA-9f7755b3-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/ (GBD 2021 round)",
+      "contents": "GBD 2021 round; Level 3 causes (139 with deaths); Deaths; Number; All ages, 0-6 days, 7-27 days, 1-5 months, 6-11 months, 12-23 months, 2-4 years, 5-14 years, 15-49 years, 50-69 years, 70+ years; Both; Global, India and 31 subnational units",
+      "years": "2021",
+      "csv_rows": 37785,
+      "bytes": 1376188,
+      "retrieved": "2026-10-15",
+      "sha256": "7325b6dba3186544cc633eff861a0b850a4a52140cf0387458ed416189277fdf"
+    },
+    {
+      "path": "gbd2021/results_tool/gbd2021_level4-5causes_deaths_number_byage_both_1990-2019-2021.zip",
+      "request": "R6_level4",
+      "original_name": "Request 6 GBD 2021 level 4 5cases.zip (inner CSV IHME-GBD_2021_DATA-bf916f47-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/ (GBD 2021 round)",
+      "contents": "GBD 2021 round; 5 level 4 causes (neonatal sepsis, maternal sepsis, UTI and interstitial nephritis, chronic hepatitis B and C including cirrhosis); Deaths; Number; All ages, 0-6 days, 7-27 days, 1-5 months, 6-11 months, 12-23 months, 2-4 years, 5-14 years, 15-49 years, 50-69 years, 70+ years; Both; Global, India and 31 subnational units",
+      "years": "1990, 2019, 2021",
+      "csv_rows": 3564,
+      "bytes": 134190,
+      "retrieved": "2026-10-15",
+      "sha256": "a712049e2a7d19a79c497b2294b584c1c8dfac1e79343e28726400acb0937056"
+    },
+    {
+      "path": "gbd2021/sepsis_paper/gbd2021_sepsis.pdf",
+      "request": null,
+      "original_name": "",
+      "source": "https://doi.org/10.1016/S2214-109X(25)00356-0",
+      "contents": "Article: GBD 2021 Global Sepsis Collaborators. Global, regional, and national sepsis incidence and mortality, 1990-2021: a systematic analysis. Lancet Glob Health 2025;13(12):e2013-26 (CC BY 4.0)",
+      "years": "1990-2021",
+      "csv_rows": null,
+      "bytes": 2941132,
+      "retrieved": "2026-10-15",
+      "sha256": "f2e28c784ac438bb81a566258261dd6393309341474ddd8862b214aee0d55b20"
+    },
+    {
+      "path": "gbd2021/sepsis_paper/gbd2021_sepsis_appendix1.pdf",
+      "request": null,
+      "original_name": "2021_Supp1.pdf",
+      "source": "https://doi.org/10.1016/S2214-109X(25)00356-0",
+      "contents": "Appendix 1 to GBD 2021 Global Sepsis Collaborators, Lancet Glob Health 2025;13(12):e2013-26 (corrected version, 1 Dec 2025)",
+      "years": "1990-2021",
+      "csv_rows": null,
+      "bytes": 9235953,
+      "retrieved": "2026-10-05",
+      "sha256": "bdc76ec7bdf5b52aae3608ecc30c4f84083d135d31ca4a19eeb31369a5eb8f2b"
+    },
+    {
+      "path": "gbd2023/cod_paper_supplement/gbd2023_cod_supplementary_tables.zip",
+      "request": null,
+      "original_name": "IHME_GBD_2023_MORTALITY_1990_2023_TABLES.zip",
+      "source": "IHME GHDx, GBD 2023 cause-specific mortality record",
+      "contents": "Supplementary results tables S1-S19 of the GBD 2023 causes-of-death paper; all GBD locations; 166 causes; benchmark years only",
+      "years": "1990-2023 (6 benchmark years)",
+      "csv_rows": null,
+      "bytes": 44736387,
+      "retrieved": "2026-10-10",
+      "sha256": "9a4fd7f798c394248ade2d950b7a316091b42141081f86867c235a0f67718736"
+    },
+    {
+      "path": "gbd2023/cod_paper_supplement/gbd2023_cod_supplementary_tables_index.xlsx",
+      "request": null,
+      "original_name": "IHME_GBD_2023_MORTALITY_1990_2023_TABLE_INDEX_Y2025M09D26.XLSX",
+      "source": "IHME GHDx, GBD 2023 cause-specific mortality record",
+      "contents": "Index of supplementary tables S1-S19",
+      "years": "",
+      "csv_rows": null,
+      "bytes": 10838,
+      "retrieved": "2026-10-10",
+      "sha256": "05c52783b921145096c4664e42a7036c6b54f647884114278733584a1aefa495"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_allcause_deaths_number-rate_byage_both_1990-2023.zip",
+      "request": "R5",
+      "original_name": "Request 5.zip (inner CSV IHME-GBD_2023_DATA-da9ad6f0-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "All causes; Deaths; Number and Rate; All ages, 0-6 days, 7-27 days, 1-5 months, 6-11 months, 12-23 months, 2-4 years, 5-14 years, 15-49 years, 50-69 years, 70+ years; Both; India and 31 subnational units",
+      "years": "1990-2023",
+      "csv_rows": 23936,
+      "bytes": 867701,
+      "retrieved": "2026-10-15",
+      "sha256": "3863bd98aa5c679dedc1c498e07066cd6884d92ec9cdd646d63c786dadb1d3ef"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_allcause_deaths_ylls_allages_agestd_bysex_1990-2023.zip",
+      "request": "allcause",
+      "original_name": "IHME-GBD_2023_DATA-7d5b0ca2-1.zip",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "All causes; Deaths and YLLs; Number and Rate; All ages and Age-standardized; Male, Female, Both; India and 31 subnational units",
+      "years": "1990-2023",
+      "csv_rows": 19584,
+      "bytes": 711244,
+      "retrieved": "2026-10-10",
+      "sha256": "080e7688fed989699ef002af6d01cfd9e5112def31d40270c675f9d725e33a42"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level2_level4-5causes_deaths_number_allages_bysex_1990-2023.zip",
+      "request": "R3a",
+      "original_name": "Request 3a.zip (inner CSV IHME-GBD_2023_DATA-c5eeb96b-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 2 causes (21) and 5 level 4 causes; Deaths; Number; All ages; Male, Female, Both; India and 31 subnational units",
+      "years": "1990-2023",
+      "csv_rows": 83776,
+      "bytes": 3132291,
+      "retrieved": "2026-10-15",
+      "sha256": "0b8de677f9b4847d06bc20552dcd44a45ba5c36319c43cac474b3887874bf53d"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level2_level4-5causes_deaths_rate_agestd_bysex_1990-2023.zip",
+      "request": "R3b",
+      "original_name": "Request 3b.zip (inner CSV IHME-GBD_2023_DATA-dbc87c40-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 2 causes (21) and 5 level 4 causes; Deaths; Rate; Age-standardized; Male, Female, Both; India and 31 subnational units",
+      "years": "1990-2023",
+      "csv_rows": 83776,
+      "bytes": 3150842,
+      "retrieved": "2026-10-15",
+      "sha256": "83ddf531d99594f4ab365dca5ba00657290e220ddd9117b663db91bbf2140cb6"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_number_allages_bysex_1990-1996.zip",
+      "request": "R1",
+      "original_name": "Request 1 1990-1996.zip (inner CSV IHME-GBD_2023_DATA-db38b8a2-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Number; All ages; Male, Female, Both; India and 31 subnational units",
+      "years": "1990-1996",
+      "csv_rows": 92512,
+      "bytes": 3413524,
+      "retrieved": "2026-10-15",
+      "sha256": "05dc2bf4afc1820cb7faf2aac75ea2352743585e75af5c922fedaa372042db1b"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_number_allages_bysex_1997-2003.zip",
+      "request": "R1",
+      "original_name": "Request 1 1997-2003.zip (inner CSV IHME-GBD_2023_DATA-e01fc816-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Number; All ages; Male, Female, Both; India and 31 subnational units",
+      "years": "1997-2003",
+      "csv_rows": 92512,
+      "bytes": 3432359,
+      "retrieved": "2026-10-15",
+      "sha256": "24e79f96f37571e6428be1135712046d956321b2199878124be842d63e5740a1"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_number_allages_bysex_2004-2010.zip",
+      "request": "R1",
+      "original_name": "Request 1 2004-2010.zip (inner CSV IHME-GBD_2023_DATA-0d703995-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Number; All ages; Male, Female, Both; India and 31 subnational units",
+      "years": "2004-2010",
+      "csv_rows": 92512,
+      "bytes": 3393882,
+      "retrieved": "2026-10-15",
+      "sha256": "9c6cda72550d0244473ce3f6bb3a8899f3a4e28b284e74322f41962a86bc6992"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_number_allages_bysex_2011-2017.zip",
+      "request": "R1",
+      "original_name": "R1 GBD 2023 2011-2017.zip (inner CSV IHME-GBD_2023_DATA-2146e5e1-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Number; All ages; Male, Female, Both; India and 31 subnational units",
+      "years": "2011-2017",
+      "csv_rows": 92512,
+      "bytes": 3409881,
+      "retrieved": "2026-10-15",
+      "sha256": "000dbed083a4f5abc2573d15931b7161208464ec90002ac32164a9a978221994"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_number_allages_bysex_2018-2023.zip",
+      "request": "R1",
+      "original_name": "R1 GBD 2023 2018-2023.zip (inner CSV IHME-GBD_2023_DATA-21d0be89-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Number; All ages; Male, Female, Both; India and 31 subnational units",
+      "years": "2018-2023",
+      "csv_rows": 79296,
+      "bytes": 2936259,
+      "retrieved": "2026-10-15",
+      "sha256": "a4a0b8bf4f12b4e2e3b6781e24bb1079162e819b84ffc256ed50daeb639d33ac"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_rate_agestd_bysex_1990-1996.zip",
+      "request": "R2",
+      "original_name": "R2 GBD 2023 1990-1996.zip (inner CSV IHME-GBD_2023_DATA-26199eb7-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Rate; Age-standardized; Male, Female, Both; India and 31 subnational units",
+      "years": "1990-1996",
+      "csv_rows": 92512,
+      "bytes": 3436276,
+      "retrieved": "2026-10-15",
+      "sha256": "a3d5eb0aedef65d3e080b63e24d635374f2c96a22dd4460ab8d0981dd34b450e"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_rate_agestd_bysex_1997-2003.zip",
+      "request": "R2",
+      "original_name": "R2 GBD2023 1997-2003.zip (inner CSV IHME-GBD_2023_DATA-32ad2f0b-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Rate; Age-standardized; Male, Female, Both; India and 31 subnational units",
+      "years": "1997-2003",
+      "csv_rows": 92512,
+      "bytes": 3435006,
+      "retrieved": "2026-10-15",
+      "sha256": "21141289c2acdc57fbe2c9711425f2b02c8b39a4a00bc2e1f9e43e52af14725d"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_rate_agestd_bysex_2004-2010.zip",
+      "request": "R2",
+      "original_name": "R2 GBD2023 2004-2010.zip (inner CSV IHME-GBD_2023_DATA-1902fbe5-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Rate; Age-standardized; Male, Female, Both; India and 31 subnational units",
+      "years": "2004-2010",
+      "csv_rows": 92512,
+      "bytes": 3428611,
+      "retrieved": "2026-10-15",
+      "sha256": "a579c7205279cc1b126a1a920890d3c9c25966d2ee34ad0f527f60653b85b200"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_rate_agestd_bysex_2011-2017.zip",
+      "request": "R2",
+      "original_name": "R2 GBD2023 2011-2017.zip (inner CSV IHME-GBD_2023_DATA-d04c6ce0-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Rate; Age-standardized; Male, Female, Both; India and 31 subnational units",
+      "years": "2011-2017",
+      "csv_rows": 92512,
+      "bytes": 3436799,
+      "retrieved": "2026-10-15",
+      "sha256": "f195985d010279b1bfc9ab9940f154ec3ae74fad74cf1c90f422d70ec5cdd25f"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_deaths_rate_agestd_bysex_2018-2023.zip",
+      "request": "R2",
+      "original_name": "R2 GBD2023 2018-2023.zip (inner CSV IHME-GBD_2023_DATA-6b00771e-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths); Deaths; Rate; Age-standardized; Male, Female, Both; India and 31 subnational units",
+      "years": "2018-2023",
+      "csv_rows": 79296,
+      "bytes": 2924540,
+      "retrieved": "2026-10-15",
+      "sha256": "4e9cc63e4a5ab575afef2ea3976eec107f7841bbd4641580270c45dc45379ff9"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_level4-5causes_deaths-ylls_number_byage_both_1990.zip",
+      "request": "R4",
+      "original_name": "R4 1990.zip (inner CSV IHME-GBD_2023_DATA-47605d99-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths) and 5 level 4 causes; Deaths and YLLs; Number; 10 age groups from 0-6 days to 70+ years; Both; India and 31 subnational units",
+      "years": "1990",
+      "csv_rows": 67008,
+      "bytes": 2444124,
+      "retrieved": "2026-10-16",
+      "sha256": "d90f10961386ba04775eaa118b615124c7f01c6c16013509e4f42c4720359d14"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_level4-5causes_deaths-ylls_number_byage_both_2000.zip",
+      "request": "R4",
+      "original_name": "R4 2000.zip (inner CSV IHME-GBD_2023_DATA-3bdf926a-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths) and 5 level 4 causes; Deaths and YLLs; Number; 10 age groups from 0-6 days to 70+ years; Both; India and 31 subnational units",
+      "years": "2000",
+      "csv_rows": 67008,
+      "bytes": 2428809,
+      "retrieved": "2026-10-16",
+      "sha256": "2704b044e76b84ddd1be173a1f24f6806ceaff7b0b7505d7d992c3dbf74d6688"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_level4-5causes_deaths-ylls_number_byage_both_2010.zip",
+      "request": "R4",
+      "original_name": "R4 2010.zip (inner CSV IHME-GBD_2023_DATA-7711acd5-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths) and 5 level 4 causes; Deaths and YLLs; Number; 10 age groups from 0-6 days to 70+ years; Both; India and 31 subnational units",
+      "years": "2010",
+      "csv_rows": 67008,
+      "bytes": 2443090,
+      "retrieved": "2026-10-16",
+      "sha256": "da9c83ff8d78b6d0c9e3cd89f7a79eed7d1fc25fbb47bb591ff0285c0a379fd0"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_level4-5causes_deaths-ylls_number_byage_both_2019.zip",
+      "request": "R4",
+      "original_name": "R4 2019.zip (inner CSV IHME-GBD_2023_DATA-d6c2f3e0-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths) and 5 level 4 causes; Deaths and YLLs; Number; 10 age groups from 0-6 days to 70+ years; Both; India and 31 subnational units",
+      "years": "2019",
+      "csv_rows": 67008,
+      "bytes": 2389374,
+      "retrieved": "2026-10-16",
+      "sha256": "8a372fd023f59b93abba079e7f28a5cc09fdfbbf62d1cf2ccf7bb2941ecf24ae"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_level4-5causes_deaths-ylls_number_byage_both_2021.zip",
+      "request": "R4",
+      "original_name": "R4 2021.zip (inner CSV IHME-GBD_2023_DATA-48b15c6b-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths) and 5 level 4 causes; Deaths and YLLs; Number; 10 age groups from 0-6 days to 70+ years; Both; India and 31 subnational units",
+      "years": "2021",
+      "csv_rows": 67008,
+      "bytes": 2407995,
+      "retrieved": "2026-10-16",
+      "sha256": "8bd23406d5d5dbbe603ad8814f273f228542f01fbbae76bbc952a5f38ae4604d"
+    },
+    {
+      "path": "gbd2023/results_tool/gbd2023_level3_level4-5causes_deaths-ylls_number_byage_both_2023.zip",
+      "request": "R4",
+      "original_name": "R4 2023.zip (inner CSV IHME-GBD_2023_DATA-c156d238-1.csv)",
+      "source": "https://vizhub.healthdata.org/gbd-results/",
+      "contents": "Level 3 causes (140 with deaths) and 5 level 4 causes; Deaths and YLLs; Number; 10 age groups from 0-6 days to 70+ years; Both; India and 31 subnational units",
+      "years": "2023",
+      "csv_rows": 67008,
+      "bytes": 2462839,
+      "retrieved": "2026-10-16",
+      "sha256": "aa08804ae8aa39ddc154935f9e9d15b0d6d06f4dac41c238b03ca1d207913111"
+    },
+    {
+      "path": "mccd/mccd_report_2008.pdf",
+      "request": null,
+      "original_name": "Annual Report on MCCD-2008 (Census of India digital library catalog 40061)",
+      "source": "https://censusindia.gov.in/nada/index.php/catalog/40061/download/43731",
+      "contents": "Report on Medical Certification of Cause of Death 2008, Office of the Registrar General, India",
+      "years": "2008",
+      "csv_rows": null,
+      "bytes": 15826741,
+      "retrieved": "2026-10-15",
+      "sha256": "dfd0a9fc7f4b1c7ef140789320cf1966e948d001e569f247b988a8cb4a27bf34"
+    },
+    {
+      "path": "mccd/mccd_report_2009.pdf",
+      "request": null,
+      "original_name": "MCCD_2009.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2009.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2009, Office of the Registrar General, India",
+      "years": "2009",
+      "csv_rows": null,
+      "bytes": 5148738,
+      "retrieved": "2026-10-15",
+      "sha256": "240211af7f4c893f94790ab0f16e0194f30a0ab9939e625f8595f3a63a604474"
+    },
+    {
+      "path": "mccd/mccd_report_2010.pdf",
+      "request": null,
+      "original_name": "MCCD_2010.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2010.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2010, Office of the Registrar General, India",
+      "years": "2010",
+      "csv_rows": null,
+      "bytes": 3559982,
+      "retrieved": "2026-10-15",
+      "sha256": "9ea980673fd511459b1ef242fc126b23cefa5a6019f07a78734e38eaa33de5a7"
+    },
+    {
+      "path": "mccd/mccd_report_2011.pdf",
+      "request": null,
+      "original_name": "MCCD_2011.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2011.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2011, Office of the Registrar General, India",
+      "years": "2011",
+      "csv_rows": null,
+      "bytes": 4940440,
+      "retrieved": "2026-10-15",
+      "sha256": "02b9422640fdc5a76fb5534d778b2854aa3624e544cec4e9572532a1389b696d"
+    },
+    {
+      "path": "mccd/mccd_report_2012.pdf",
+      "request": null,
+      "original_name": "MCCD_2012.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2012.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2012, Office of the Registrar General, India",
+      "years": "2012",
+      "csv_rows": null,
+      "bytes": 8229025,
+      "retrieved": "2026-10-15",
+      "sha256": "d9f597aec7b079e278dd2af7444914e9b939184cba3d822e0f1221b2ebc37cf0"
+    },
+    {
+      "path": "mccd/mccd_report_2013.pdf",
+      "request": null,
+      "original_name": "MCCD_2013.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2013.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2013, Office of the Registrar General, India",
+      "years": "2013",
+      "csv_rows": null,
+      "bytes": 4855342,
+      "retrieved": "2026-10-15",
+      "sha256": "88f59989779059a692e605f3a0ea3835d61402058580d5f5bc0923b29ba282e9"
+    },
+    {
+      "path": "mccd/mccd_report_2014.pdf",
+      "request": null,
+      "original_name": "MCCD_2014.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2014.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2014, Office of the Registrar General, India",
+      "years": "2014",
+      "csv_rows": null,
+      "bytes": 4705866,
+      "retrieved": "2026-10-15",
+      "sha256": "2f59fcc6210a202fadd4619c2af9da0932d6820cc60426d3427d3b7a2163345b"
+    },
+    {
+      "path": "mccd/mccd_report_2015.pdf",
+      "request": null,
+      "original_name": "MCCD_2015.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2015.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2015, Office of the Registrar General, India",
+      "years": "2015",
+      "csv_rows": null,
+      "bytes": 35639826,
+      "retrieved": "2026-10-15",
+      "sha256": "6f83787f9473025553f245b8a029cfce4726227f2a77c5dfe1fd05c8f0f80dea"
+    },
+    {
+      "path": "mccd/mccd_report_2016.pdf",
+      "request": null,
+      "original_name": "MCCD_2016.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2016.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2016, Office of the Registrar General, India",
+      "years": "2016",
+      "csv_rows": null,
+      "bytes": 17399303,
+      "retrieved": "2026-10-15",
+      "sha256": "2b78039cd7b5e79bd14eebc61b295c72e22ea17560501e98ed238b8dc6c8d8b6"
+    },
+    {
+      "path": "mccd/mccd_report_2017.pdf",
+      "request": null,
+      "original_name": "MCCD_2017.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2017.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2017, Office of the Registrar General, India",
+      "years": "2017",
+      "csv_rows": null,
+      "bytes": 10607667,
+      "retrieved": "2026-10-15",
+      "sha256": "99275b8d11f4bf01bdf21e8b0093741c7d2dca8c680654c7033b08a50c3e05b8"
+    },
+    {
+      "path": "mccd/mccd_report_2018.pdf",
+      "request": null,
+      "original_name": "MCCD_2018.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2018.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2018, Office of the Registrar General, India",
+      "years": "2018",
+      "csv_rows": null,
+      "bytes": 9333830,
+      "retrieved": "2026-10-15",
+      "sha256": "08373ba134e3884a86dba9daa7a8eddd71fc3585164805198d476b79ba85df65"
+    },
+    {
+      "path": "mccd/mccd_report_2019.pdf",
+      "request": null,
+      "original_name": "MCCD_2019.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2019.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2019, Office of the Registrar General, India",
+      "years": "2019",
+      "csv_rows": null,
+      "bytes": 9322727,
+      "retrieved": "2026-10-15",
+      "sha256": "0113bc164868bcb1e0cb57139ce2a1d2607eabdbed6114e1cf24b79badf570e7"
+    },
+    {
+      "path": "mccd/mccd_report_2020.pdf",
+      "request": null,
+      "original_name": "MCCD_2020.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2020.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2020, Office of the Registrar General, India",
+      "years": "2020",
+      "csv_rows": null,
+      "bytes": 7390998,
+      "retrieved": "2026-10-15",
+      "sha256": "ddbb12067401797dc415f4db8cb027e0a952eb348f806e456f04e2e13a6dd2f3"
+    },
+    {
+      "path": "mccd/mccd_report_2021.pdf",
+      "request": null,
+      "original_name": "MCCD_2021.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2021.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2021, Office of the Registrar General, India",
+      "years": "2021",
+      "csv_rows": null,
+      "bytes": 12053557,
+      "retrieved": "2026-10-15",
+      "sha256": "b3a1d23c7b4be0cd3b21055b45e31717f47a6296ebfc3d8cb71cee18a63f5448"
+    },
+    {
+      "path": "mccd/mccd_report_2022.pdf",
+      "request": null,
+      "original_name": "MCCD_2022.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2022.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2022, Office of the Registrar General, India",
+      "years": "2022",
+      "csv_rows": null,
+      "bytes": 13972665,
+      "retrieved": "2026-10-15",
+      "sha256": "145a8fcca532727ec8c467a3b86d1bbf598640cdabb211031ff0d008ff22a892"
+    },
+    {
+      "path": "mccd/mccd_report_2023.pdf",
+      "request": null,
+      "original_name": "MCCD_2023.pdf",
+      "source": "https://dc.crsorgi.gov.in/assets/download/Annual-Reports/mccd/2023.pdf",
+      "contents": "Report on Medical Certification of Cause of Death 2023, Office of the Registrar General, India",
+      "years": "2023",
+      "csv_rows": null,
+      "bytes": 12862561,
+      "retrieved": "2026-10-15",
+      "sha256": "5b1f3bb7f00503471d1668deeb12075ee539a0bfa059c01938d0ddfe6814410d"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2017-06_table08_birth_rate_1990-2015.xlsx",
+      "request": null,
+      "original_name": "08SDI_2406172BFA53CD50224668B011504CA01EAE57.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/08SDI_2406172BFA53CD50224668B011504CA01EAE57.XLSX",
+      "contents": "Table 8: State-wise birth rate per 1,000 population, 35 States/UTs and All India; RBI Handbook of Statistics on Indian States, release of 24 June 2017; source: Sample Registration System Bulletins, Office of the Registrar General and Census Commissioner",
+      "years": "1990-2015",
+      "csv_rows": null,
+      "bytes": 15743,
+      "retrieved": "2026-10-16",
+      "sha256": "24ca631f536e6603c06a9cf9c546298d32c31806b25a6bbffaeb333887578d54"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2025-12_table02_birth_rate_2004-2023.xlsx",
+      "request": null,
+      "original_name": "2T_11122025382C4BD8859E47A2B510B8A332E7A589.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/2T_11122025382C4BD8859E47A2B510B8A332E7A589.XLSX",
+      "contents": "Table 2: State-wise birth rate per 1,000 population, 37 States/UTs and All India; RBI Handbook of Statistics on Indian States 2024-25, release of 11 December 2025; source: Sample Registration System Bulletins, Office of the Registrar General and Census Commissioner",
+      "years": "2004-2023",
+      "csv_rows": null,
+      "bytes": 16156,
+      "retrieved": "2026-10-16",
+      "sha256": "cb64c147ca84258edf20506656432969b57e8cfafe84e2bc6972eaa8ec7b2057"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2025-12_table03_death_rate_2004-2023.xlsx",
+      "request": null,
+      "original_name": "3T_111220254D0C628610584647A785A4DC76884B04.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/3T_111220254D0C628610584647A785A4DC76884B04.XLSX",
+      "contents": "Table 3: State-wise death rate per 1,000 population, 37 States/UTs and All India; RBI Handbook of Statistics on Indian States 2024-25, release of 11 December 2025; source: Sample Registration System Bulletins, Office of the Registrar General and Census Commissioner",
+      "years": "2004-2023",
+      "csv_rows": null,
+      "bytes": 15092,
+      "retrieved": "2026-10-16",
+      "sha256": "2d0ce9e2a2d5649700a39973ee102d2dfdf7e5dffb64e6943d95236b377f0ba9"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2025-12_table04_infant_mortality_rate_2004-2023.xlsx",
+      "request": null,
+      "original_name": "4T_11122025025F203A250E46CAB963946C776ADBAF.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/4T_11122025025F203A250E46CAB963946C776ADBAF.XLSX",
+      "contents": "Table 4: State-wise infant mortality rate per 1,000 live births, 36 States/UTs and All India; RBI Handbook of Statistics on Indian States 2024-25, release of 11 December 2025; source: Sample Registration System Bulletins, Office of the Registrar General and Census Commissioner",
+      "years": "2004-2023",
+      "csv_rows": null,
+      "bytes": 14777,
+      "retrieved": "2026-10-16",
+      "sha256": "7f5e2e5b7d6221832bf92d4f4734045773831472afb809ef2fef9f12dc845bc9"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2025-12_table05_maternal_mortality_ratio_1999-2023.xlsx",
+      "request": null,
+      "original_name": "5T_111220254548CA2016E4432288FBB97802B02561.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/5T_111220254548CA2016E4432288FBB97802B02561.XLSX",
+      "contents": "Table 5: State-wise maternal mortality ratio per 100,000 live births, 19 States, Others and All India, three-year periods 1999-01 to 2021-23; RBI Handbook of Statistics on Indian States 2024-25, release of 11 December 2025; source: SRS Special Bulletins on Maternal Mortality, Office of the Registrar General",
+      "years": "1999-2023",
+      "csv_rows": null,
+      "bytes": 11509,
+      "retrieved": "2026-10-16",
+      "sha256": "43c67ae2dca56eb8203ad81cc3777226db726ea6d6d66b1836b7cedaa70d0d14"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2025-12_table19_per_capita_nsdp_current_2011-2025.xlsx",
+      "request": null,
+      "original_name": "19T_11122025B8CC230E4A34431999B4D6A107707BCA.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/19T_11122025B8CC230E4A34431999B4D6A107707BCA.XLSX",
+      "contents": "Table 19: Per capita net state domestic product at current prices (rupees), 34 States/UTs, 2011-12 to 2024-25; RBI Handbook of Statistics on Indian States 2024-25, release of 11 December 2025; source: National Statistical Office, Ministry of Statistics and Programme Implementation; base 2011-12",
+      "years": "2011-2025",
+      "csv_rows": null,
+      "bytes": 15059,
+      "retrieved": "2026-10-16",
+      "sha256": "1f90818b79f1e53bfcaf90f76ef66e1db6e810ef22076791b049d429a184be15"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2025-12_table20_per_capita_nsdp_constant_2011-2025.xlsx",
+      "request": null,
+      "original_name": "20T_111220252B6EE27737FD4931A99C5A448B7CEC68.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/20T_111220252B6EE27737FD4931A99C5A448B7CEC68.XLSX",
+      "contents": "Table 20: Per capita net state domestic product at constant 2011-12 prices (rupees), 33 States/UTs, 2011-12 to 2024-25; RBI Handbook of Statistics on Indian States 2024-25, release of 11 December 2025; source: National Statistical Office, Ministry of Statistics and Programme Implementation; base 2011-12",
+      "years": "2011-2025",
+      "csv_rows": null,
+      "bytes": 15953,
+      "retrieved": "2026-10-16",
+      "sha256": "0861a3b6a0df2b41f21918b5108a9de0d93cb18d3808f625ef8bb0da24603a71"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2025-12_table23_nsdp_current_2011-2025.xlsx",
+      "request": null,
+      "original_name": "23T_11122025142A7C614BA04533BA1EE9EC9BCA7DBB.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/23T_11122025142A7C614BA04533BA1EE9EC9BCA7DBB.XLSX",
+      "contents": "Table 23: Net state domestic product at current prices (rupees lakh), 34 States/UTs, 2011-12 to 2024-25; RBI Handbook of Statistics on Indian States 2024-25, release of 11 December 2025; source: National Statistical Office, Ministry of Statistics and Programme Implementation; base 2011-12",
+      "years": "2011-2025",
+      "csv_rows": null,
+      "bytes": 16771,
+      "retrieved": "2026-10-16",
+      "sha256": "cac54346910ebcdeb9fe783660b561d9a6233255a8d003017315cdff543e8c7b"
+    },
+    {
+      "path": "rbi/handbook/rbi_handbook_2025-12_table24_nsdp_constant_2011-2025.xlsx",
+      "request": null,
+      "original_name": "24T_111220256149723C25EB468BB1DED32D422521FB.XLSX",
+      "source": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/24T_111220256149723C25EB468BB1DED32D422521FB.XLSX",
+      "contents": "Table 24: Net state domestic product at constant 2011-12 prices (rupees lakh), 33 States/UTs, 2011-12 to 2024-25; RBI Handbook of Statistics on Indian States 2024-25, release of 11 December 2025; source: National Statistical Office, Ministry of Statistics and Programme Implementation; base 2011-12",
+      "years": "2011-2025",
+      "csv_rows": null,
+      "bytes": 15596,
+      "retrieved": "2026-10-16",
+      "sha256": "ff2b2c3416a347ac4bee90de668e866326442cf9ba0018be3f64593490feb98e"
+    },
+    {
+      "path": "microbe/microbe_india_2021_syndromes_deaths_rate.csv",
+      "request": null,
+      "original_name": "microbe_download.csv",
+      "source": "https://vizhub.healthdata.org/microbe/ (Infectious syndromes tab, Bars; Download syndrome data)",
+      "contents": "MICROBE (GBD 2021): deaths by infectious syndrome, 22 syndromes, all pathogens; India, All Ages, Both sexes, Deaths, Rate (per 100k), 2021, with 95% uncertainty bounds",
+      "years": "2021",
+      "csv_rows": 22,
+      "bytes": 3514,
+      "retrieved": "2026-10-16",
+      "sha256": "175bbf4726be9e407a4eb744b42178c56b0a7066c781dbd60daae8482c6ef66f"
+    },
+    {
+      "path": "microbe/microbe_india_2021_pathogens_deaths_rate.csv",
+      "request": null,
+      "original_name": "microbe_download (1).csv",
+      "source": "https://vizhub.healthdata.org/microbe/ (Pathogens tab, Bars; Download pathogen data)",
+      "contents": "MICROBE (GBD 2021): deaths by pathogen, 62 pathogens with pathogen type, all infectious syndromes; India, All Ages, Both sexes, Deaths, Rate (per 100k), 2021, with 95% uncertainty bounds",
+      "years": "2021",
+      "csv_rows": 62,
+      "bytes": 10997,
+      "retrieved": "2026-10-16",
+      "sha256": "bfbd497fe7328b01a38a70ee88b56912b82af8472b32b862924acddf1b6f3813"
+    },
+    {
+      "path": "microbe/microbe_india_2021_amr_detailed_deaths_rate.csv",
+      "request": null,
+      "original_name": "microbe_download (2).csv",
+      "source": "https://vizhub.healthdata.org/microbe/ (Antimicrobial resistance tab, Bars, Syndromes, Burden Detailed; Download syndrome data)",
+      "contents": "MICROBE (GBD 2021): deaths by infectious syndrome split into associated with resistance, susceptible and untested; India, All Ages, Both sexes, Deaths, Rate (per 100k), 2021, with 95% uncertainty bounds",
+      "years": "2021",
+      "csv_rows": 42,
+      "bytes": 7109,
+      "retrieved": "2026-10-16",
+      "sha256": "28be2ce8c67620adb67e9550a3ba4c762b20d996a93faf63e4c7a924b209822e"
+    },
+    {
+      "path": "microbe/microbe_india_2021_syndromes_deaths_number.csv",
+      "request": null,
+      "original_name": "microbe_download.csv",
+      "source": "https://vizhub.healthdata.org/microbe/ (Infectious syndromes tab, Bars; Download syndrome data)",
+      "contents": "MICROBE (GBD 2021): deaths by infectious syndrome, 22 syndromes, all pathogens; India, All Ages, Both sexes, Deaths, Number, 2021, with 95% uncertainty bounds",
+      "years": "2021",
+      "csv_rows": 22,
+      "bytes": 3267,
+      "retrieved": "2026-10-16",
+      "sha256": "3925154df099612c25629c614120b9d5f338137c2110774f4724e6e57164ed42"
+    },
+    {
+      "path": "microbe/microbe_india_2021_pathogens_deaths_number.csv",
+      "request": null,
+      "original_name": "microbe_download (1).csv",
+      "source": "https://vizhub.healthdata.org/microbe/ (Pathogens tab, Bars; Download pathogen data)",
+      "contents": "MICROBE (GBD 2021): deaths by pathogen, 62 pathogens with pathogen type, all infectious syndromes; India, All Ages, Both sexes, Deaths, Number, 2021, with 95% uncertainty bounds",
+      "years": "2021",
+      "csv_rows": 62,
+      "bytes": 10344,
+      "retrieved": "2026-10-16",
+      "sha256": "cae59793e63f690352372660a6e126aab648edeacf626abaa26f91067130b518"
+    },
+    {
+      "path": "microbe/microbe_india_2021_amr_detailed_deaths_number.csv",
+      "request": null,
+      "original_name": "microbe_download (2).csv",
+      "source": "https://vizhub.healthdata.org/microbe/ (Antimicrobial resistance tab, Bars, Syndromes, Burden Detailed; Download syndrome data)",
+      "contents": "MICROBE (GBD 2021): deaths by infectious syndrome split into associated with resistance, susceptible and untested; India, All Ages, Both sexes, Deaths, Number, 2021, with 95% uncertainty bounds",
+      "years": "2021",
+      "csv_rows": 42,
+      "bytes": 6648,
+      "retrieved": "2026-10-16",
+      "sha256": "5e86ddeec73d3381a3d97c2ddc21873117a81fdccb63f0488f889ad679d83abc"
+    },
+    {
+      "path": "microbe/microbe_india_2021_amr_by_resistance_deaths_number.csv",
+      "request": null,
+      "original_name": "microbe_download (3).csv",
+      "source": "https://vizhub.healthdata.org/microbe/ (Antimicrobial resistance tab, Bars, Syndromes, Burden By resistance, Counterfactual Both; Download syndrome data)",
+      "contents": "MICROBE (GBD 2021): deaths associated with and attributable to bacterial antimicrobial resistance, 11 syndromes; India, All Ages, Both sexes, Deaths, Number, 2021, with 95% uncertainty bounds",
+      "years": "2021",
+      "csv_rows": 22,
+      "bytes": 3574,
+      "retrieved": "2026-10-16",
+      "sha256": "3b5dc197e49516f430a5dca92bd6f4855b578d85d69510319106f700d3ab0411"
+    },
+    {
+      "path": "microbe/microbe_india_2021_amr_by_resistance_deaths_rate.csv",
+      "request": null,
+      "original_name": "microbe_download (4).csv",
+      "source": "https://vizhub.healthdata.org/microbe/ (Antimicrobial resistance tab, Bars, Syndromes, Burden By resistance, Counterfactual Both; Download syndrome data)",
+      "contents": "MICROBE (GBD 2021): deaths associated with and attributable to bacterial antimicrobial resistance, 11 syndromes; India, All Ages, Both sexes, Deaths, Rate (per 100k), 2021, with 95% uncertainty bounds",
+      "years": "2021",
+      "csv_rows": 22,
+      "bytes": 3808,
+      "retrieved": "2026-10-16",
+      "sha256": "83cdc7c658734bdf700cf6c2c1133654e54e940f677772b36c9756bab806fe9b"
+    },
+    {
+      "path": "soi/admin_boundary/soi_ovsf-1m-7_india_state_district_1m.zip",
+      "request": null,
+      "original_name": "File_672151_6ef4cb0375a74ea4bbbf202aa38c17b2.zip",
+      "source": "Survey of India, Department of Science and Technology, Government of India: Online Maps Portal (https://onlinemaps.surveyofindia.gov.in/Digital_Product_Show.aspx), product OVSF/1M/7, Administrative Boundary Database for entire country up to District level with HQ, 1:1M, shapefile; applied for on 2026-10-16 (self-declaration, undertaking, PAN); used under the undertaking: non-commercial use, Survey of India cited, data not altered or redistributed",
+      "contents": "Folder 91/ with five shapefiles: STATE_BOUNDARY (40 polygons: 36 States/UTs in the current configuration and 4 areas marked DISPUTED between States), DISTRICT_BOUNDARY, DISTRICT_HQ, STATE_HQ and MAJOR_TOWNS (.shp, .shx, .dbf, .prj, .sbn, .sbx, .cpg, and .shp.xml for four of them; files dated 2026-10-15); Lambert conformal conic on WGS 1984, metres; India's external boundary as depicted by the Survey of India; only STATE_BOUNDARY is used",
+      "years": "2026",
+      "csv_rows": null,
+      "bytes": 80777338,
+      "retrieved": "2026-10-27",
+      "sha256": "e569a5f7efc62afb42b4195ddb406c46c400c7dea232e1f7949fca5982830006"
+    }
+  ],
+  "pending": [],
+  "haq": {
+    "path": "gbd2016/haq_index/gbd2016_haq_index_scaled_cause_values.zip",
+    "columns": [
+      "location_id",
+      "ihme_loc_id",
+      "location_name",
+      "indicator_id",
+      "indicator_name",
+      "measure",
+      "year_id",
+      "val",
+      "lower",
+      "upper",
+      "parent_location",
+      "sdi_quintile",
+      "super_region_name",
+      "region_name"
+    ],
+    "index_indicator_id": "100",
+    "indicators": 33,
+    "years": [
+      1990,
+      1995,
+      2000,
+      2005,
+      2010,
+      2016
+    ],
+    "national": "India",
+    "global": "Global",
+    "units": 31,
+    "name_aliases": {
+      "Jammu and Kashmir": "Jammu & Kashmir and Ladakh",
+      "Union Territories other than Delhi": "Other Union Territories"
+    }
+  },
+  "srs_birth_rate": {
+    "tables": [
+      {
+        "path": "rbi/handbook/rbi_handbook_2017-06_table08_birth_rate_1990-2015.xlsx",
+        "sheets": [
+          "T_8"
+        ],
+        "years": [
+          1990,
+          2015
+        ]
+      },
+      {
+        "path": "rbi/handbook/rbi_handbook_2025-12_table02_birth_rate_2004-2023.xlsx",
+        "sheets": [
+          "T_2(i)",
+          "T_2(ii)"
+        ],
+        "years": [
+          2004,
+          2023
+        ]
+      }
+    ],
+    "header_prefix": "State",
+    "national": "ALL INDIA",
+    "not_applicable": ".",
+    "not_available": "-",
+    "combined_marker": "*",
+    "name_aliases": {
+      "Jammu and Kashmir": "Jammu & Kashmir"
+    },
+    "plausible_range": [
+      5,
+      50
+    ],
+    "isolated_jump": 4,
+    "printed_irregularities": [
+      {
+        "state": "Andhra Pradesh",
+        "year": 2001,
+        "value": 28.8
+      }
+    ]
+  },
+  "rbi_tables": {
+    "name_aliases": {
+      "Andhra Pradhesh": "Andhra Pradesh",
+      "Jammu & Kashmir*": "Jammu & Kashmir"
+    },
+    "tables": {
+      "death_rate": {
+        "path": "rbi/handbook/rbi_handbook_2025-12_table03_death_rate_2004-2023.xlsx",
+        "sheets": [
+          "T_3(i)",
+          "T_3(ii)"
+        ],
+        "periods": [
+          2004,
+          2023
+        ],
+        "kind": "year",
+        "range": [
+          1,
+          20
+        ],
+        "period_row": "header",
+        "markers": [
+          ".",
+          "-"
+        ],
+        "combined_marker": "*",
+        "national": "ALL INDIA"
+      },
+      "infant_mortality_rate": {
+        "path": "rbi/handbook/rbi_handbook_2025-12_table04_infant_mortality_rate_2004-2023.xlsx",
+        "sheets": [
+          "T_4(i)",
+          "T_4(ii)"
+        ],
+        "periods": [
+          2004,
+          2023
+        ],
+        "kind": "year",
+        "range": [
+          1,
+          120
+        ],
+        "period_row": "header",
+        "markers": [
+          ".",
+          "-"
+        ],
+        "combined_marker": "*",
+        "national": "ALL INDIA"
+      },
+      "maternal_mortality_ratio": {
+        "path": "rbi/handbook/rbi_handbook_2025-12_table05_maternal_mortality_ratio_1999-2023.xlsx",
+        "sheets": [
+          "T_5"
+        ],
+        "kind": "period",
+        "periods": [
+          "1999-01",
+          "2001-03",
+          "2004-06",
+          "2007-09",
+          "2010-12",
+          "2011-13",
+          "2014-16",
+          "2015-17",
+          "2016-18",
+          "2017-19",
+          "2018-20",
+          "2019-21",
+          "2020-22",
+          "2021-23"
+        ],
+        "range": [
+          1,
+          1000
+        ],
+        "period_row": "header",
+        "markers": [
+          "-"
+        ],
+        "combined_marker": "*",
+        "national": "ALL INDIA",
+        "header_prefix": "Year"
+      },
+      "per_capita_nsdp_current": {
+        "path": "rbi/handbook/rbi_handbook_2025-12_table19_per_capita_nsdp_current_2011-2025.xlsx",
+        "sheets": [
+          "T_19(i)",
+          "T_19(ii)"
+        ],
+        "periods": [
+          2011,
+          2024
+        ],
+        "kind": "fiscal",
+        "range": [
+          5000,
+          2000000
+        ],
+        "period_row": "next",
+        "markers": [
+          "-"
+        ],
+        "combined_marker": "*",
+        "national": null
+      },
+      "per_capita_nsdp_constant": {
+        "path": "rbi/handbook/rbi_handbook_2025-12_table20_per_capita_nsdp_constant_2011-2025.xlsx",
+        "sheets": [
+          "T_20(i)",
+          "T_20(ii)"
+        ],
+        "periods": [
+          2011,
+          2024
+        ],
+        "kind": "fiscal",
+        "range": [
+          5000,
+          2000000
+        ],
+        "period_row": "next",
+        "markers": [
+          "-"
+        ],
+        "combined_marker": "*",
+        "national": null
+      },
+      "nsdp_current": {
+        "path": "rbi/handbook/rbi_handbook_2025-12_table23_nsdp_current_2011-2025.xlsx",
+        "sheets": [
+          "T_23(i)",
+          "T_23(ii)"
+        ],
+        "periods": [
+          2011,
+          2024
+        ],
+        "kind": "fiscal",
+        "range": [
+          1000,
+          1000000000.0
+        ],
+        "period_row": "next",
+        "markers": [
+          "-"
+        ],
+        "combined_marker": "*",
+        "national": null
+      },
+      "nsdp_constant": {
+        "path": "rbi/handbook/rbi_handbook_2025-12_table24_nsdp_constant_2011-2025.xlsx",
+        "sheets": [
+          "T_24(i)",
+          "T_24(ii)"
+        ],
+        "periods": [
+          2011,
+          2024
+        ],
+        "kind": "fiscal",
+        "range": [
+          1000,
+          1000000000.0
+        ],
+        "period_row": "next",
+        "markers": [
+          "-"
+        ],
+        "combined_marker": "*",
+        "national": null
+      }
+    },
+    "base_year": "2011-12",
+    "base_year_tolerance_lakh": 5,
+    "base_year_tolerance_rupees": 1,
+    "implied_population_tolerance": 0.0001,
+    "pairs": [
+      [
+        "nsdp_current",
+        "per_capita_nsdp_current",
+        "nsdp_constant",
+        "per_capita_nsdp_constant"
+      ]
+    ]
+  },
+  "microbe": {
+    "fixed": {
+      "Location": "India",
+      "Age": "All Ages",
+      "Sex": "Both sexes",
+      "Measure": "Deaths",
+      "Year": "2021"
+    },
+    "metrics": {
+      "number": "Number",
+      "rate": "Rate (per 100k)"
+    },
+    "views": {
+      "syndromes": {
+        "key": [
+          "Infectious syndrome"
+        ],
+        "rows": 22,
+        "number": "microbe/microbe_india_2021_syndromes_deaths_number.csv",
+        "rate": "microbe/microbe_india_2021_syndromes_deaths_rate.csv"
+      },
+      "pathogens": {
+        "key": [
+          "Pathogen"
+        ],
+        "rows": 62,
+        "number": "microbe/microbe_india_2021_pathogens_deaths_number.csv",
+        "rate": "microbe/microbe_india_2021_pathogens_deaths_rate.csv"
+      },
+      "amr_detailed": {
+        "key": [
+          "Infectious syndrome",
+          "Counterfactual"
+        ],
+        "rows": 42,
+        "counterfactuals": [
+          "Associated",
+          "Susceptible",
+          "Untested"
+        ],
+        "number": "microbe/microbe_india_2021_amr_detailed_deaths_number.csv",
+        "rate": "microbe/microbe_india_2021_amr_detailed_deaths_rate.csv"
+      },
+      "amr_by_resistance": {
+        "key": [
+          "Infectious syndrome",
+          "Counterfactual"
+        ],
+        "rows": 22,
+        "counterfactuals": [
+          "Associated",
+          "Attributable"
+        ],
+        "number": "microbe/microbe_india_2021_amr_by_resistance_deaths_number.csv",
+        "rate": "microbe/microbe_india_2021_amr_by_resistance_deaths_rate.csv"
+      }
+    },
+    "implied_population_tolerance": 1e-06,
+    "sum_tolerance": 1e-09
+  },
+  "state_boundary": {
+    "path": "soi/admin_boundary/soi_ovsf-1m-7_india_state_district_1m.zip",
+    "layer": "91/STATE_BOUNDARY",
+    "members": [
+      "91/",
+      "91/DISTRICT_BOUNDARY.CPG",
+      "91/DISTRICT_BOUNDARY.dbf",
+      "91/DISTRICT_BOUNDARY.prj",
+      "91/DISTRICT_BOUNDARY.sbn",
+      "91/DISTRICT_BOUNDARY.sbx",
+      "91/DISTRICT_BOUNDARY.shp",
+      "91/DISTRICT_BOUNDARY.shp.xml",
+      "91/DISTRICT_BOUNDARY.shx",
+      "91/DISTRICT_HQ.cpg",
+      "91/DISTRICT_HQ.dbf",
+      "91/DISTRICT_HQ.prj",
+      "91/DISTRICT_HQ.sbn",
+      "91/DISTRICT_HQ.sbx",
+      "91/DISTRICT_HQ.shp",
+      "91/DISTRICT_HQ.shx",
+      "91/MAJOR_TOWNS.cpg",
+      "91/MAJOR_TOWNS.dbf",
+      "91/MAJOR_TOWNS.prj",
+      "91/MAJOR_TOWNS.sbn",
+      "91/MAJOR_TOWNS.sbx",
+      "91/MAJOR_TOWNS.shp",
+      "91/MAJOR_TOWNS.shp.xml",
+      "91/MAJOR_TOWNS.shx",
+      "91/STATE_BOUNDARY.CPG",
+      "91/STATE_BOUNDARY.dbf",
+      "91/STATE_BOUNDARY.prj",
+      "91/STATE_BOUNDARY.sbn",
+      "91/STATE_BOUNDARY.sbx",
+      "91/STATE_BOUNDARY.shp",
+      "91/STATE_BOUNDARY.shp.xml",
+      "91/STATE_BOUNDARY.shx",
+      "91/STATE_HQ.cpg",
+      "91/STATE_HQ.dbf",
+      "91/STATE_HQ.prj",
+      "91/STATE_HQ.sbn",
+      "91/STATE_HQ.sbx",
+      "91/STATE_HQ.shp",
+      "91/STATE_HQ.shp.xml",
+      "91/STATE_HQ.shx"
+    ],
+    "encoding": "UTF-8",
+    "projection": "PROJCS[\"LCC_WGS84\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Lambert_Conformal_Conic\"],PARAMETER[\"False_Easting\",4000000.0],PARAMETER[\"False_Northing\",4000000.0],PARAMETER[\"Central_Meridian\",80.0],PARAMETER[\"Standard_Parallel_1\",12.472944],PARAMETER[\"Standard_Parallel_2\",35.172806],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",24.0],UNIT[\"Meter\",1.0]]",
+    "shape_type": 5,
+    "fields": [
+      [
+        "OBJECTID",
+        "N",
+        10,
+        0
+      ],
+      [
+        "STATE",
+        "C",
+        50,
+        0
+      ],
+      [
+        "Shape_Leng",
+        "F",
+        19,
+        11
+      ],
+      [
+        "Shape_Area",
+        "F",
+        19,
+        11
+      ]
+    ],
+    "bounding_box_tolerance_m": 1e-06,
+    "geometry_tolerance": 1e-06,
+    "perimeter_differs": [
+      "HIMACHAL PRADESH",
+      "JAMMU AND KASHMIR",
+      "LADAKH",
+      "WEST BENGAL"
+    ],
+    "perimeter_note": "For these records the stored Shape_Leng is shorter than the length of the rings (by 0.02% to 1.3%) while the stored Shape_Area matches; the rings are used as supplied",
+    "national": "India",
+    "units": {
+      "AN": [
+        "ANDAMAN & NICOBAR",
+        "Other Union Territories"
+      ],
+      "AP": [
+        "ANDHRA PRADESH",
+        "Andhra Pradesh"
+      ],
+      "AR": [
+        "ARUNACHAL PRADESH",
+        "Arunachal Pradesh"
+      ],
+      "AS": [
+        "ASSAM",
+        "Assam"
+      ],
+      "BR": [
+        "BIHAR",
+        "Bihar"
+      ],
+      "CG": [
+        "CHHATTISGARH",
+        "Chhattisgarh"
+      ],
+      "CH": [
+        "CHANDIGARH",
+        "Other Union Territories"
+      ],
+      "DH": [
+        "DADRA & NAGAR HAVELI & DAMAN & DIU",
+        "Other Union Territories"
+      ],
+      "DL": [
+        "DELHI",
+        "Delhi"
+      ],
+      "GA": [
+        "GOA",
+        "Goa"
+      ],
+      "GJ": [
+        "GUJARAT",
+        "Gujarat"
+      ],
+      "HP": [
+        "HIMACHAL PRADESH",
+        "Himachal Pradesh"
+      ],
+      "HR": [
+        "HARYANA",
+        "Haryana"
+      ],
+      "JH": [
+        "JHARKHAND",
+        "Jharkhand"
+      ],
+      "JK": [
+        "JAMMU AND KASHMIR",
+        "Jammu & Kashmir and Ladakh"
+      ],
+      "KA": [
+        "KARNATAKA",
+        "Karnataka"
+      ],
+      "KL": [
+        "KERALAM",
+        "Kerala"
+      ],
+      "LD": [
+        "LAKSHADWEEP",
+        "Other Union Territories"
+      ],
+      "LK": [
+        "LADAKH",
+        "Jammu & Kashmir and Ladakh"
+      ],
+      "MH": [
+        "MAHARASHTRA",
+        "Maharashtra"
+      ],
+      "ML": [
+        "MEGHALAYA",
+        "Meghalaya"
+      ],
+      "MN": [
+        "MANIPUR",
+        "Manipur"
+      ],
+      "MP": [
+        "MADHYA PRADESH",
+        "Madhya Pradesh"
+      ],
+      "MZ": [
+        "MIZORAM",
+        "Mizoram"
+      ],
+      "NL": [
+        "NAGALAND",
+        "Nagaland"
+      ],
+      "OD": [
+        "ODISHA",
+        "Odisha"
+      ],
+      "PB": [
+        "PUNJAB",
+        "Punjab"
+      ],
+      "PY": [
+        "PUDUCHERRY",
+        "Other Union Territories"
+      ],
+      "RJ": [
+        "RAJASTHAN",
+        "Rajasthan"
+      ],
+      "SK": [
+        "SIKKIM",
+        "Sikkim"
+      ],
+      "TN": [
+        "TAMIL NADU",
+        "Tamil Nadu"
+      ],
+      "TR": [
+        "TRIPURA",
+        "Tripura"
+      ],
+      "TS": [
+        "TELANGANA",
+        "Telangana"
+      ],
+      "UK": [
+        "UTTARAKHAND",
+        "Uttarakhand"
+      ],
+      "UP": [
+        "UTTAR PRADESH",
+        "Uttar Pradesh"
+      ],
+      "WB": [
+        "WEST BENGAL",
+        "West Bengal"
+      ]
+    },
+    "disputed": [
+      "DISPUTED (MADHYA PRADESH & GUJARAT)",
+      "DISPUTED (MADHYA PRADESH & RAJASTHAN)",
+      "DISPUTED (RAJATHAN & GUJARAT)",
+      "DISPUTED (WEST BENGAL , BIHAR & JHARKHAND)"
+    ]
+  }
+}

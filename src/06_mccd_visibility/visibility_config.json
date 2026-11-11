@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "mccd_directory": "data/processed/mccd",
+  "estimates_directory": "data/processed/state_estimates",
+  "india": "India",
+  "mccd_india": "India (all reporting States/UTs)",
+  "reporting_units": "India (complete reporting units)",
+  "fixed_panel": "India (units reporting in every trend year)",
+  "years": [2008, 2023],
+  "first_projection_year": 2022,
+  "trend_years": [2008, 2019],
+  "trend_minimum_years": 5,
+  "combined_units": {
+    "Jammu & Kashmir and Ladakh": [
+      {"from": 2008, "to": 2019, "members": ["Jammu & Kashmir"]},
+      {"from": 2020, "to": 2023, "members": ["Jammu & Kashmir", "Ladakh"]}
+    ],
+    "Other Union Territories": [
+      {"from": 2008, "to": 2019, "members": ["Andaman & Nicobar Islands", "Chandigarh", "Dadra & Nagar Haveli", "Daman & Diu", "Lakshadweep", "Puducherry"]},
+      {"from": 2020, "to": 2023, "members": ["Andaman & Nicobar Islands", "Chandigarh", "Dadra & Nagar Haveli and Daman & Diu", "Lakshadweep", "Puducherry"]}
+    ]
+  },
+  "zero_rows_ignored": {"Daman & Diu": [2021, 2022]},
+  "andhra_telangana": {
+    "unit": "Andhra Pradesh and Telangana",
+    "gbd_units": ["Andhra Pradesh", "Telangana"],
+    "through": 2014,
+    "members": [
+      {"from": 2008, "to": 2013, "members": ["Andhra Pradesh"]},
+      {"from": 2014, "to": 2014, "members": ["Andhra Pradesh", "Telangana"]}
+    ]
+  }
+}

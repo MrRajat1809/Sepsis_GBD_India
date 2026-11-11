@@ -1,0 +1,211 @@
+{
+  "version": "1.0.0",
+  "raw_directory": "data/raw/mccd",
+  "years": [
+    2008,
+    2023
+  ],
+  "pdftotext": {
+    "command": "pdftotext",
+    "arguments": [
+      "-table",
+      "-enc",
+      "UTF-8"
+    ],
+    "reference_version": "4.00"
+  },
+  "all_india": "India (all reporting States/UTs)",
+  "india_mccd_reporting": "India (MCCD reporting States/UTs)",
+  "merged_dnh": "Dadra & Nagar Haveli and Daman & Diu",
+  "merged_dnh_from_year": 2020,
+  "state_patterns": [
+    {
+      "name": "India (all reporting States/UTs)",
+      "pattern": "\\bAll(\\s+States)?\\b"
+    },
+    {
+      "name": "India (MCCD reporting States/UTs)",
+      "pattern": "Total\\s+MCCD\\s+Reporting"
+    },
+    {
+      "name": "India (all registered deaths)",
+      "pattern": "\\bTotal\\b"
+    },
+    {
+      "name": "Dadra & Nagar Haveli and Daman & Diu",
+      "pattern": "D\\s*&\\s*N\\s+Haveli\\s*&\\s+Daman\\s*&\\s*Diu"
+    },
+    {
+      "name": "Dadra & Nagar Haveli",
+      "pattern": "D\\s*&\\s*N\\s+Haveli|Dadra\\s*(&|and)?\\s*Nagar\\s+Haveli"
+    },
+    {
+      "name": "Daman & Diu",
+      "pattern": "Daman\\*?\\s*&\\s*Diu"
+    },
+    {
+      "name": "Andhra Pradesh",
+      "pattern": "Andhra\\s+Pradesh"
+    },
+    {
+      "name": "Andaman & Nicobar Islands",
+      "pattern": "A\\s*&\\s*N\\s+Islands"
+    },
+    {
+      "name": "Arunachal Pradesh",
+      "pattern": "Arunachal\\s+Pradesh"
+    },
+    {
+      "name": "Assam",
+      "pattern": "\\bAssam\\b"
+    },
+    {
+      "name": "Bihar",
+      "pattern": "\\bBihar\\b"
+    },
+    {
+      "name": "Chandigarh",
+      "pattern": "Chandigarh"
+    },
+    {
+      "name": "Chhattisgarh",
+      "pattern": "Chh?att?isgarh"
+    },
+    {
+      "name": "Delhi",
+      "pattern": "\\bDelhi\\b"
+    },
+    {
+      "name": "Goa",
+      "pattern": "\\bGoa\\b"
+    },
+    {
+      "name": "Gujarat",
+      "pattern": "Guj\\w*rat"
+    },
+    {
+      "name": "Haryana",
+      "pattern": "Haryana"
+    },
+    {
+      "name": "Himachal Pradesh",
+      "pattern": "Himachal\\s+Pradesh"
+    },
+    {
+      "name": "Jammu & Kashmir",
+      "pattern": "Jammu\\s*&\\s*Kashmir"
+    },
+    {
+      "name": "Jharkhand",
+      "pattern": "Jharkhand"
+    },
+    {
+      "name": "Karnataka",
+      "pattern": "Karnataka"
+    },
+    {
+      "name": "Kerala",
+      "pattern": "Kerala"
+    },
+    {
+      "name": "Ladakh",
+      "pattern": "Ladakh"
+    },
+    {
+      "name": "Lakshadweep",
+      "pattern": "Laksh\\w*"
+    },
+    {
+      "name": "Madhya Pradesh",
+      "pattern": "Madhya\\s+Pradesh"
+    },
+    {
+      "name": "Maharashtra",
+      "pattern": "Maharashtra"
+    },
+    {
+      "name": "Manipur",
+      "pattern": "Manipur"
+    },
+    {
+      "name": "Meghalaya",
+      "pattern": "Meghalaya"
+    },
+    {
+      "name": "Mizoram",
+      "pattern": "Mizoram"
+    },
+    {
+      "name": "Nagaland",
+      "pattern": "Nagaland"
+    },
+    {
+      "name": "Odisha",
+      "pattern": "Odisha|Orissa"
+    },
+    {
+      "name": "Puducherry",
+      "pattern": "Puducherry|Pondicherry"
+    },
+    {
+      "name": "Punjab",
+      "pattern": "Punjab"
+    },
+    {
+      "name": "Rajasthan",
+      "pattern": "Rajasthan"
+    },
+    {
+      "name": "Sikkim",
+      "pattern": "Sikkim"
+    },
+    {
+      "name": "Tamil Nadu",
+      "pattern": "Tamil\\s+Nadu"
+    },
+    {
+      "name": "Telangana",
+      "pattern": "Telangana"
+    },
+    {
+      "name": "Tripura",
+      "pattern": "Tripura"
+    },
+    {
+      "name": "Uttarakhand",
+      "pattern": "Uttarakhand|Uttaranchal"
+    },
+    {
+      "name": "Uttar Pradesh",
+      "pattern": "Uttar\\s+Pradesh"
+    },
+    {
+      "name": "West Bengal",
+      "pattern": "West\\s+Bengal"
+    }
+  ],
+  "state_patterns_note": "Matched in this order and masked, so a merged name precedes its parts.",
+  "table4_rows": [
+    {
+      "cause": "septicaemia_A40-A41",
+      "pattern": "Septic(a)?emia"
+    },
+    {
+      "cause": "infectious_parasitic_A00-B99",
+      "pattern": "CERTAIN\\s+INFECTIOUS"
+    },
+    {
+      "cause": "ill_defined_R00-R99",
+      "pattern": "SYMPTOMS,?\\s+SIGNS"
+    },
+    {
+      "cause": "all_causes",
+      "pattern": "ALL\\s+CAUSES"
+    }
+  ],
+  "sex_codes": {
+    "M": "Male",
+    "F": "Female",
+    "T": "Total"
+  }
+}

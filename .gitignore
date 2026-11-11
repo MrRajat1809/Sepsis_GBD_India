@@ -1,0 +1,9 @@
+# Downloaded and generated data
+/data/
+/outputs/
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store

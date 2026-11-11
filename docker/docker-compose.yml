@@ -1,0 +1,14 @@
+services:
+  sepsis_gbd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sepsis_gbd_env:1.0.0
+    init: true
+    working_dir: /workspace
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - ..:/workspace
+    environment:
+      - JUPYTER_TOKEN

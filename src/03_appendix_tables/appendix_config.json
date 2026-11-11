@@ -1,0 +1,116 @@
+{
+  "version": "1.0.0",
+  "raw_directory": "data/raw",
+  "raw_config": "src/01_raw_data/raw_config.json",
+  "documents": {
+    "sepsis": "gbd2021/sepsis_paper/gbd2021_sepsis_appendix1.pdf",
+    "demographics": "gbd2021/demographics_paper/gbd2021_demographics_appendix1.pdf"
+  },
+  "pymupdf_reference_version": "1.28.0",
+  "wrap_max_gap": 8.0,
+  "population_minimum_deaths": 100,
+  "tables": {
+    "S14": {
+      "document": "demographics",
+      "pages": [213, 213],
+      "page_text": {
+        "every": [
+          "Appendix Table S14: GBD world population age standard",
+          "Age Group Percent of Population Rounded"
+        ],
+        "first": []
+      },
+      "label_columns": {
+        "age_group": [0, 110]
+      },
+      "value_start_x": 110,
+      "cell_format": "plain",
+      "cells": {
+        "column": ["percent", "rounded"]
+      },
+      "rows": 25,
+      "age_groups": [
+        "Early Neonatal", "Late Neonatal", "1 to 5 months", "6 to 11 months", "12 to 23 months", "2 to 4", "5 to 9",
+        "10 to 14", "15 to 19", "20 to 24", "25 to 29", "30 to 34", "35 to 39", "40 to 44", "45 to 49", "50 to 54",
+        "55 to 59", "60 to 64", "65 to 69", "70 to 74", "75 to 79", "80 to 84", "85 to 89", "90 to 94", "95 plus"
+      ]
+    },
+    "S8": {
+      "document": "sepsis",
+      "cell_format": "interval",
+      "pages": [107, 108],
+      "page_text": {
+        "every": [
+          "Table S8. Sepsis-related mortality by infectious and non-infectious underlying causes, by region and country, all ages, in 1990, 2019, and 2021",
+          "Location Name",
+          "All Causes Non-Infectious Causes All Causes Non-Infectious Causes All Causes Non-Infectious Causes",
+          "Counts (95% UI) Rate per 100k (95% UI) Counts (95% UI) Rate per 100k (95% UI) Counts (95% UI) Rate per 100k (95% UI) Counts (95% UI) Rate per 100k (95% UI) Counts (95% UI) Rate per 100k (95% UI) Counts (95% UI) Rate per 100k (95% UI)"
+        ],
+        "first": []
+      },
+      "label_columns": {
+        "location": [0, 125]
+      },
+      "value_start_x": 125,
+      "cells": {
+        "year": ["1990", "2019", "2021"],
+        "cause_group": ["All causes", "Non-infectious causes"],
+        "metric": ["Number", "Rate"]
+      },
+      "rows": 225,
+      "regions": [
+        "East Asia", "Southeast Asia", "Oceania", "Central Asia", "Central Europe", "Eastern Europe",
+        "High-income Asia Pacific", "Australasia", "Western Europe", "Southern Latin America",
+        "High-income North America", "Caribbean", "Andean Latin America", "Central Latin America",
+        "Tropical Latin America", "North Africa and Middle East", "South Asia", "Central Sub-Saharan Africa",
+        "Eastern Sub-Saharan Africa", "Southern Sub-Saharan Africa", "Western Sub-Saharan Africa"
+      ]
+    },
+    "S10": {
+      "document": "sepsis",
+      "cell_format": "interval",
+      "pages": [112, 130],
+      "page_text": {
+        "every": [
+          "Table S10. Global sepsis-related mortality by Level 2-4 underlying causes, all ages and by age group, in 1990, 2019, and 2021",
+          "Cause Name Cause Level Cause Type Age Group Name"
+        ],
+        "first": [
+          "Counts (95% UI) Rate per 100k (95% UI) Counts (95% UI) Rate per 100k (95% UI) Counts (95% UI) Rate per 100k (95% UI)"
+        ]
+      },
+      "label_columns": {
+        "cause": [0, 140],
+        "cause_level": [140, 250],
+        "cause_type": [250, 370],
+        "age_group": [370, 470]
+      },
+      "value_start_x": 470,
+      "cells": {
+        "year": ["1990", "2019", "2021"],
+        "metric": ["Number", "Rate"]
+      },
+      "rows": 1663,
+      "levels": ["0.5", "1", "2", "3", "4"],
+      "types": ["Infectious", "Non-Infectious"],
+      "all_ages": "All Ages",
+      "age_groups": ["Neonatal", "Post Neonatal", "1-4 years", "5-14 years", "15-49 years", "50-69 years", "70+ years"],
+      "infectious_total": {"cause": "Infectious diseases", "cause_level": "0.5"},
+      "age_sum_exceptions": [
+        {"cause": "Police conflict and executions", "cause_level": "3", "year": "1990"}
+      ]
+    }
+  },
+  "gbd2021_comparison": {
+    "requests": ["R6_level2", "R6_level3", "R6_level4"],
+    "india": "India",
+    "global": "Global",
+    "all_ages": "All ages",
+    "compared_levels": ["3", "4"],
+    "cause_name_aliases": {
+      "Other unintentional injuries (internal)": "Other unintentional injuries"
+    },
+    "tolerance": 0.005,
+    "absolute_tolerance_deaths": 1.0
+  }
+}

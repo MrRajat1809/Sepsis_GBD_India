@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "level4_causes": {
+    "Neonatal sepsis and other neonatal infections": "Neonatal disorders",
+    "Maternal sepsis and other maternal infections": "Maternal disorders",
+    "Urinary tract infections and interstitial nephritis": "Urinary diseases and male infertility",
+    "Chronic hepatitis B including cirrhosis": "Cirrhosis and other chronic liver diseases",
+    "Chronic hepatitis C including cirrhosis": "Cirrhosis and other chronic liver diseases"
+  },
+  "infectious_underlying_causes": {
+    "source": "GBD 2021 sepsis paper, appendix 1: Table S3, restricted to the causes printed in Table S10",
+    "level2": [
+      "HIV/AIDS and sexually transmitted infections",
+      "Respiratory infections and tuberculosis",
+      "Enteric infections",
+      "Neglected tropical diseases and malaria",
+      "Other infectious diseases"
+    ],
+    "level2_children_excluded": [
+      "Varicella and herpes zoster"
+    ],
+    "level3": [
+      "Endocarditis",
+      "Appendicitis",
+      "Bacterial skin diseases"
+    ],
+    "level4": [
+      "Maternal sepsis and other maternal infections",
+      "Neonatal sepsis and other neonatal infections",
+      "Urinary tract infections and interstitial nephritis"
+    ],
+    "listed_in_s3_but_not_in_ihme_totals": [
+      "Chronic hepatitis B including cirrhosis",
+      "Chronic hepatitis C including cirrhosis",
+      "Varicella and herpes zoster"
+    ]
+  },
+  "age_groups": [
+    "0-6 days", "7-27 days", "1-5 months", "6-11 months", "12-23 months",
+    "2-4 years", "5-14 years", "15-49 years", "50-69 years", "70+ years"
+  ],
+  "sepsis_age_bands": {
+    "Neonatal": ["0-6 days", "7-27 days"],
+    "Post Neonatal": ["1-5 months", "6-11 months"],
+    "1-4 years": ["12-23 months", "2-4 years"],
+    "5-14 years": ["5-14 years"],
+    "15-49 years": ["15-49 years"],
+    "50-69 years": ["50-69 years"],
+    "70+ years": ["70+ years"]
+  }
+}
