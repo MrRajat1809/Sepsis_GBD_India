@@ -181,8 +181,15 @@ def read_polygons(path, member):
 
 # Figures -------------------------------------------------------------------------------------------------------------
 
+def lancet_thousands(match):
+    """Return a comma-grouped whole number closed up (1460) or, from five digits, grouped by thin spaces (100 000)."""
+    digits = match.group(0).replace(',', '')
+    return digits if len(digits) < 5 else '\u2009'.join(re.findall(r'\d{1,3}(?=(?:\d{3})*$)', digits))
+
+
 def lancet_text(text):
-    """Return text in the journal's number style: midline decimal points and en rules in ranges."""
+    """Return text in the journal's number style: no commas in numbers, midline decimal points and en rules in ranges."""
+    text = re.sub(r'(?<!\d)(?<!\d,)\d{1,3}(?:,\d{3})+(?!\d|,\d)', lancet_thousands, text)
     return re.sub(r'(?<=\d)-(?=\d)', '–', re.sub(r'(?<=\d)\.(?=\d)', '·', text))
 
 

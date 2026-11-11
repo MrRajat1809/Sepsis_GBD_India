@@ -159,7 +159,7 @@ def build_state_causes():
     full = tuple(swatch(colour[g]) for g, _ in GROUPS)
     light = tuple(swatch(F.tint(colour[g], F.CONFIG['tint'])) for g, _ in GROUPS)
     fig.legend(handles=[full, light, Line2D([], [], color=secondary, linewidth=0.6)],
-               labels=["The state's leading cause of the group", 'Other causes', "India's rate"], loc='upper right',
+               labels=["The state's leading cause of the group", 'Other listed causes', "India's rate"], loc='upper right',
                bbox_to_anchor=((width - 0.06) / width, (FOOT - NOTE - 0.2) / height), fontsize=size, ncols=3, handlelength=1.6, handleheight=0.75,
                handletextpad=0.35, columnspacing=1.0, borderaxespad=0, borderpad=0, handler_map={tuple: HandlerTuple(ndivide=None, pad=0.15)})
     exported = F.save(fig, STEM)

@@ -118,7 +118,8 @@ def build_causes():
                'rank among the leading ones in another year. Deaths in thousands with 95% uncertainty intervals, from India\'s own GBD '
                'estimates (approximate). *Excluding the level 4 cause counted with the infectious causes (neonatal sepsis, maternal '
                'sepsis, or urinary tract infections). COPD=chronic obstructive pulmonary disease. UTI=urinary tract infections and '
-               'interstitial nephritis. STIs=sexually transmitted infections. iNTS=invasive non-typhoidal Salmonella.')
+               'interstitial nephritis. STIs=sexually transmitted infections.'
+               + (' iNTS=invasive non-typhoidal Salmonella.' if 'iNTS' in shortened else ''))
     F.write_report('04_figure_causes.json', __file__, dict(figure=STEM, years=years, leading=top, font_size=size, shortened=shortened),
                    inputs=[('state_estimates', 'uncertainty_by_cause.csv')], export=exported, caption_note=F.lancet_text(caption))
     print(f'[04] Complete; {STEM}: leading {top} infectious and non-infectious causes, India, {", ".join(map(str, years))} '
